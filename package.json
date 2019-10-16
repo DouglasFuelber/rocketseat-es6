@@ -1,0 +1,16 @@
+{
+  "name": "rocketseat-es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DouglasFuelber/rocketseat-es6.git",
+  "author": "DouglasFuelber <dffuelber@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3"
+  },
+  "scripts": {
+    "dev": "babel ./main.js -o ./bundle.js -w"
+  }
+}
