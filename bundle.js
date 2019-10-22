@@ -18,6 +18,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+/***** Module 1: Exercise 1 *****/
 var Usuario =
 /*#__PURE__*/
 function () {
@@ -60,3 +61,30 @@ var User1 = new Usuario('usuario@teste.com', 'senha123');
 var Adm1 = new Admin('adminl@teste.com', 'senha123');
 console.log("".concat(User1.email, " - Admin: ").concat(User1.isAdmin()));
 console.log("".concat(Adm1.email, " - Admin: ").concat(Adm1.isAdmin()));
+/***** Module 1: Exercise 2 *****/
+
+var usuarios = [{
+  nome: 'Diego',
+  idade: 23,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Gabriel',
+  idade: 15,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Lucas',
+  idade: 30,
+  empresa: 'Facebook'
+}];
+var idades = usuarios.map(function (item) {
+  return item.idade;
+});
+console.log(idades);
+var empregadosMaiores = usuarios.filter(function (item) {
+  return item.idade > 18 && item.empresa === 'Rocketseat';
+});
+console.log(empregadosMaiores);
+var empregadoGoogle = usuarios.find(function (item) {
+  return item.empresa === 'Google';
+});
+console.log(empregadoGoogle);
