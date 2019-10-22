@@ -88,3 +88,11 @@ var empregadoGoogle = usuarios.find(function (item) {
   return item.empresa === 'Google';
 });
 console.log(empregadoGoogle);
+var novasIdades = usuarios.map(function (item) {
+  item.idade *= 2;
+  return item;
+});
+var usuariosMenos50 = novasIdades.filter(function (item) {
+  return item.idade <= 50;
+});
+console.log(usuariosMenos50);
