@@ -75,19 +75,23 @@ var usuarios = [{
   nome: 'Lucas',
   idade: 30,
   empresa: 'Facebook'
-}];
+}]; // 2.1
+
 var idades = usuarios.map(function (item) {
   return item.idade;
 });
-console.log(idades);
+console.log(idades); // 2.2
+
 var empregadosMaiores = usuarios.filter(function (item) {
   return item.idade > 18 && item.empresa === 'Rocketseat';
 });
-console.log(empregadosMaiores);
+console.log(empregadosMaiores); // 2.3
+
 var empregadoGoogle = usuarios.find(function (item) {
   return item.empresa === 'Google';
 });
-console.log(empregadoGoogle);
+console.log(empregadoGoogle); // 2.4
+
 var novasIdades = usuarios.map(function (item) {
   item.idade *= 2;
   return item;
@@ -96,3 +100,63 @@ var usuariosMenos50 = novasIdades.filter(function (item) {
   return item.idade <= 50;
 });
 console.log(usuariosMenos50);
+/***** Module 1: Exercise 3 *****/
+// 3.1
+// const arr = [1, 2, 3, 4, 5];
+// arr.map(function (item) {
+//     return item + 10;
+// });
+
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.map(function (item) {
+  return item + 10;
+})); // 3.2
+// const usuario = { nome: 'Diego', idade: 23 };
+// function mostraIdade(usuario) {
+//     return usuario.idade;
+// }
+// mostraIdade(usuario);
+
+var usuario = {
+  nome: 'Diego',
+  idade: 23
+};
+
+var mostraIdade = function mostraIdade(usuario) {
+  return usuario.idade;
+};
+
+console.log(mostraIdade(usuario)); // 3.3
+// const nome = "Diego";
+// const idade = 23;
+// function mostraUsuario(nome = 'Diego', idade = 18) {
+//     return { nome, idade };
+// }
+// mostraUsuario(nome, idade);
+// mostraUsuario(nome);
+
+var nome = "Diego";
+var idade = 23;
+
+var mostraUsuario = function mostraUsuario() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+};
+
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome)); // 3.4
+// const promise = function () {
+//     return new Promise(function (resolve, reject) {
+//         return resolve();
+//     })
+// }
+
+var promise = function promise() {
+  return new Promise(function (resolve, reject) {
+    return resolve();
+  });
+};

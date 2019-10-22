@@ -32,26 +32,71 @@ const usuarios = [
     { nome: 'Lucas', idade: 30, empresa: 'Facebook' },
 ];
 
-var idades = usuarios.map(function(item) {
+// 2.1
+var idades = usuarios.map(function (item) {
     return item.idade;
 });
 console.log(idades);
-
-var empregadosMaiores = usuarios.filter(function(item) {
+// 2.2
+var empregadosMaiores = usuarios.filter(function (item) {
     return item.idade > 18 && item.empresa === 'Rocketseat';
 });
 console.log(empregadosMaiores);
-
-var empregadoGoogle = usuarios.find(function(item) {
+// 2.3
+var empregadoGoogle = usuarios.find(function (item) {
     return item.empresa === 'Google';
 });
 console.log(empregadoGoogle);
-
-var novasIdades = usuarios.map(function(item) {
+// 2.4
+var novasIdades = usuarios.map(function (item) {
     item.idade *= 2;
     return item;
 });
-var usuariosMenos50 = novasIdades.filter(function(item) {
+var usuariosMenos50 = novasIdades.filter(function (item) {
     return item.idade <= 50;
 });
 console.log(usuariosMenos50);
+
+/***** Module 1: Exercise 3 *****/
+// 3.1
+// const arr = [1, 2, 3, 4, 5];
+// arr.map(function (item) {
+//     return item + 10;
+// });
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.map(item => item + 10));
+
+// 3.2
+// const usuario = { nome: 'Diego', idade: 23 };
+// function mostraIdade(usuario) {
+//     return usuario.idade;
+// }
+// mostraIdade(usuario);
+
+const usuario = { nome: 'Diego', idade: 23 };
+const mostraIdade = (usuario) => usuario.idade;
+console.log(mostraIdade(usuario));
+
+// 3.3
+// const nome = "Diego";
+// const idade = 23;
+// function mostraUsuario(nome = 'Diego', idade = 18) {
+//     return { nome, idade };
+// }
+// mostraUsuario(nome, idade);
+// mostraUsuario(nome);
+
+const nome = "Diego";
+const idade = 23;
+const mostraUsuario = (nome = 'Diego', idade = 18) => ({ nome, idade });
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome));
+
+// 3.4
+// const promise = function () {
+//     return new Promise(function (resolve, reject) {
+//         return resolve();
+//     })
+// }
+
+const promise = () => new Promise((resolve, reject) => resolve())
