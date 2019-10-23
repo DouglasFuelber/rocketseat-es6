@@ -102,20 +102,11 @@ var usuariosMenos50 = novasIdades.filter(function (item) {
 console.log(usuariosMenos50);
 /***** Module 1: Exercise 3 *****/
 // 3.1
-// const arr = [1, 2, 3, 4, 5];
-// arr.map(function (item) {
-//     return item + 10;
-// });
 
 var arr = [1, 2, 3, 4, 5];
 console.log(arr.map(function (item) {
   return item + 10;
 })); // 3.2
-// const usuario = { nome: 'Diego', idade: 23 };
-// function mostraIdade(usuario) {
-//     return usuario.idade;
-// }
-// mostraIdade(usuario);
 
 var usuario = {
   nome: 'Diego',
@@ -127,13 +118,6 @@ var mostraIdade = function mostraIdade(usuario) {
 };
 
 console.log(mostraIdade(usuario)); // 3.3
-// const nome = "Diego";
-// const idade = 23;
-// function mostraUsuario(nome = 'Diego', idade = 18) {
-//     return { nome, idade };
-// }
-// mostraUsuario(nome, idade);
-// mostraUsuario(nome);
 
 var nome = "Diego";
 var idade = 23;
@@ -149,14 +133,39 @@ var mostraUsuario = function mostraUsuario() {
 
 console.log(mostraUsuario(nome, idade));
 console.log(mostraUsuario(nome)); // 3.4
-// const promise = function () {
-//     return new Promise(function (resolve, reject) {
-//         return resolve();
-//     })
-// }
 
 var promise = function promise() {
   return new Promise(function (resolve, reject) {
     return resolve();
   });
 };
+/***** Module 1: Exercise 4 *****/
+// 4.1
+
+
+var empresa = {
+  nome_empresa: 'Rocketseat',
+  endereco_empresa: {
+    cidade_empresa: 'Rio do Sul',
+    estado_empresa: 'SC'
+  }
+};
+var nome_empresa = empresa.nome_empresa,
+    _empresa$endereco_emp = empresa.endereco_empresa,
+    cidade_empresa = _empresa$endereco_emp.cidade_empresa,
+    estado_empresa = _empresa$endereco_emp.estado_empresa;
+console.log(nome_empresa);
+console.log(cidade_empresa);
+console.log(estado_empresa); // 4.2
+
+function mostraInfo(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  return "".concat(nome, " tem ").concat(idade, " anos.");
+}
+
+var user = {
+  nome: 'Diego',
+  idade: 23
+};
+console.log(mostraInfo(user));
