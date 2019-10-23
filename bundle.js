@@ -204,3 +204,8 @@ var usuario5_3 = _objectSpread({}, usuario5, {
 
 console.log(usuario5_2);
 console.log(usuario5_3);
+/***** Module 1: Exercise 6 *****/
+
+var usuario6 = 'Diego';
+var idade6 = 23;
+console.log("O usu\xE1rio ".concat(usuario6, " possui ").concat(idade6, " anos"));

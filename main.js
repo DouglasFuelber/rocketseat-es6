@@ -119,3 +119,8 @@ const usuario5_2 = { ...usuario5, nome: 'Gabriel' };
 const usuario5_3 = { ...usuario5, nome: 'Lontras' };
 console.log(usuario5_2);
 console.log(usuario5_3);
+
+/***** Module 1: Exercise 6 *****/
+const usuario6 = 'Diego';
+const idade6 = 23;
+console.log(`O usuário ${usuario6} possui ${idade6} anos`);
