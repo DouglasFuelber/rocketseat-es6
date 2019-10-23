@@ -209,3 +209,13 @@ console.log(usuario5_3);
 var usuario6 = 'Diego';
 var idade6 = 23;
 console.log("O usu\xE1rio ".concat(usuario6, " possui ").concat(idade6, " anos"));
+/***** Module 1: Exercise 7 *****/
+
+var name = 'Diego';
+var age = 23;
+var usuario7 = {
+  name: name,
+  age: age,
+  city: 'Rio do Sul'
+};
+console.log(usuario7);
