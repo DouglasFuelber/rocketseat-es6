@@ -97,3 +97,25 @@ function mostraInfo({ nome, idade }) {
 }
 const user = { nome: 'Diego', idade: 23 }
 console.log(mostraInfo(user));
+
+/***** Module 1: Exercise 5 *****/
+// 5.1
+const array = [1, 2, 3, 4, 5, 6];
+var [x, ...y] = array;
+console.log(x);
+console.log(y);
+
+// 5.2
+const usuario5 = {
+    nome: 'Diego',
+    idade: 23,
+    endereco: {
+        cidade: 'Rio do Sul',
+        uf: 'SC',
+        pais: 'Brasil',
+    }
+};
+const usuario5_2 = { ...usuario5, nome: 'Gabriel' };
+const usuario5_3 = { ...usuario5, nome: 'Lontras' };
+console.log(usuario5_2);
+console.log(usuario5_3);
