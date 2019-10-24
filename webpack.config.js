@@ -1,5 +1,5 @@
 module.exports = {
-    entry: ['./src/main.js', './src/exercises_module_1.js'],
+    entry: ['./src/main.js', './src/exercises_module_1.js', './src/exercises_module_2.js'],
     output: {
         path: __dirname + '/public',
         filename: 'bundle.js',
