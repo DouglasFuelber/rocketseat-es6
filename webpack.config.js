@@ -1,10 +1,7 @@
 module.exports = {
     entry: [
         '@babel/polyfill',
-        './src/main.js',
-        './src/exercises_module_1.js',
-        './src/exercises_module_2.js',
-        './src/exercises_module_3.js'
+        './src/main.js'
     ],
     output: {
         path: __dirname + '/public',
